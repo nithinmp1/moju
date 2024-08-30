@@ -9,12 +9,21 @@
 <link rel="stylesheet" href="css/bootstrap.css">
 <link href="css/all.css" rel="stylesheet">
 <link href="css/owl.carousel.min.css" rel="stylesheet">
+<link href="css/aos.css" rel="stylesheet">
 <link href="css/animate.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css"  href="css/demo.css">
 <link href="css/style.css" rel="stylesheet">
 
 </head>
-<body>
+<body onload="myFunction()" style="margin:0;">
+
+
+  <div id="loader">
+    <div>
+      <img src="images/loader.gif" style="width: 150px;">
+      <h3 class="text-white pt-4">Loading.........</h3>
+    </div>
+  </div>
 
   <div id="mySidenav" class="sidenav">
     <div class="container">
@@ -143,7 +152,7 @@
   <div class="main-container">
     <div class="row">
       <div class="col-lg-5">
-        <div class="rightway-left box-shadow box1">
+        <div class="rightway-left box-shadow box1" data-aos="fade-right" data-aos-duration="3000">
         <div class="main-header">
           <h1>Upcoming <br> Adventures</h1>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
@@ -152,7 +161,7 @@
        </div>
       </div>
       <div class="col-lg-7">
-        <div class="rightway-right">
+        <div class="rightway-right" data-aos="fade-left" data-aos-duration="3000">
           <div class="owl-carousel owl-theme rightway-slider">
             <div class="item">
               <div class="rightway-item">
@@ -194,7 +203,7 @@
       <div class="item">
         <div class="row">
           <div class="col-md-5">
-            <div class="tools-left">
+            <div class="tools-left" data-aos="fade-up" data-aos-duration="3000">
               <span class="tools-span">About us</span>
               <div class="main-header">
                 <h1>What’s behind Watse  <br> trekking agency ?</h1>
@@ -205,7 +214,7 @@
             </div>
           </div>
           <div class="col-md-7">
-            <img src="images/about.jpg" class="about">    
+            <img src="images/about.jpg" class="about" data-aos="flip-left" data-aos-duration="3000">    
           </div>
         </div>
       </div>
@@ -226,10 +235,10 @@
         </div>
       </div>
       <div class="col-lg-6">
-        <img src="images/service1.jpg" class="float-right`">
+        <img src="images/service1.jpg" class="float-left" data-aos="flip-left" data-aos-duration="3000">
       </div>
       <div class="col-lg-6">
-        <div class="ser-text">
+        <div class="ser-text" data-aos="fade-right" data-aos-duration="3000">
           <img src="images/top-strip.png">
           <h5>International Group Trip</h5>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.</p>
@@ -240,7 +249,7 @@
     </div>
     <div class="row ser-second-row d-flex flex-column-reverse flex-lg-row box-shadow">
       <div class="col-lg-6">
-        <div class="ser-text ser-text-left">
+        <div class="ser-text ser-text-left" data-aos="fade-left" data-aos-duration="3000">
           <img src="images/top-strip.png">
           <h5>Domestic Group Trip</h5>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.</p>
@@ -249,7 +258,7 @@
         </div>
       </div>
       <div class="col-lg-6">
-        <img src="images/services2.jpg">
+        <img src="images/services2.jpg" data-aos="flip-right" data-aos-duration="3000">
       </div>
     </div>
   </div>
@@ -263,7 +272,7 @@
   <div class="main-container">
     <div class="row box-shadow">
       <div class="col-md-5">
-        <div class="testi-left">
+        <div class="testi-left" data-aos="fade-down-right" data-aos-duration="3000">
           <span class="testi-span">CUSTOMER TESTIMONIALS</span>
           <div class="main-header">
             <h1>What they<br> think of us</h1>
@@ -366,17 +375,14 @@
 
 
 <div class="trial-form" id="tr-form">
- 
   <div class="form-wrapper">
     <img src="images/cancel.png" class="float-right trial-close" id="trial-close">
         <input type="text" placeholder="Search" class="log-input">
-        
         <div class="w-100 float-left d-flex justify-content-center"><button type="submit" class="login-submit">Submit</button></div>
-        
     </div>
     </div>
-
-
+ 
+  
 
 
 
@@ -384,6 +390,25 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/aos.js"></script>
+
+
+<script>
+  AOS.init();
+</script>
+
+<script>
+  var myVar;
+  
+  function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+  }
+  
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("myDiv").style.display = "block";
+  }
+  </script>
 
 </body>
 </html>
